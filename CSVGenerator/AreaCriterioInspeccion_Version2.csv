@@ -1,0 +1,22 @@
+AreaCriterioInspeccionId,Identificador,Nombre,Descripcion,Activo
+1,Oficinas_Admin,Oficinas administrativas,,TRUE
+2,Proteccion_Perimetral,Protección perimetral (barda),,TRUE
+3,Senalitica_Marca,Señalítica de marca y preciadores,,TRUE
+4,Area_Tanques,Área de tanques de almacenamiento,,TRUE
+5,Sistema_Vapores,Sistema de recuperación de vapores,,TRUE
+6,Dispensadores,Dispensadores de combustible,,TRUE
+7,Area_Dispensadores,Área de dispensadores de combustible,,TRUE
+8,Tuberias_Agua_Aire,Sistemas de tuberías de agua y aire,,TRUE
+9,Area_Comida,Área de comida rápida,,TRUE
+10,Subestacion_Electrica,Subestación eléctrica / sistema de suministro de e,,TRUE
+11,Area_Estacionamiento,Área de estacionamiento,,TRUE
+12,Area_Descanso,Área de descanso,,TRUE
+13,Almacen_Residuos,Almacén temporal de residuos peligrosos,,TRUE
+14,Vias_Acceso,Vías de acceso y salida,,TRUE
+15,Sistema_Medicion,Sistema de medición,,TRUE
+16,Tuberia_Accesorios,Tubería y accesorios,,TRUE
+17,Paro_Emergencia,Sistema de paro de emergencia,,TRUE
+18,Area_Bombas,Área de bombas,,TRUE
+19,Aguas_Aceitosas,Sistema de aguas aceitosas,,TRUE
+20,Aguas_Pluviales,Sistema de aguas pluviales,,TRUE
+21,Pozo_Observacion,Pozo de observación de derrames,,TRUE

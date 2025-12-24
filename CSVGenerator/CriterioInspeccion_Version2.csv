@@ -1,0 +1,17 @@
+CriterioInspeccionId,Nombre,Descripcion,Activo
+1,Señalamientos de seguridad,,TRUE
+2,Extintores,,TRUE
+3,Orden y limpieza,,TRUE
+4,Alumbrado y conexiones eléctricas,,TRUE
+5,Sistema de tierra física,,TRUE
+6,Corrosión,,TRUE
+7,Pintura,,TRUE
+8,Rejillas en el sistema de drenaje,,TRUE
+9,Daños mecánicos y/o físicos,,TRUE
+10,Fugas o derrames,,TRUE
+11,Sistemas de monitoreo y control,,TRUE
+12,Inspección,,TRUE
+13,Pruebas,,TRUE
+14,Calibración,,TRUE
+15,Mantenimiento preventivo,,TRUE
+16,Cumplimiento regulatorio,,TRUE

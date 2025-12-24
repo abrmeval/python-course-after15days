@@ -1,0 +1,49 @@
+OpcionCriterioInspeccionId,Nombre,Descripcion,CriterioInspeccionId,Activo
+1,Cuenta con señalamientos en buen estado,,1,TRUE
+2,Cuenta con señalamientos en mal estado,,1,TRUE
+3,No cuenta con señalamientos,,1,TRUE
+4,Cuenta con extintores en buen estado,,2,TRUE
+5,Cuenta con extintores vencidos,,2,TRUE
+6,No cuenta con extintores,,2,TRUE
+7,Existe orden y limpieza,,3,TRUE
+8,Falta mejorar el orden y la limpieza,,3,TRUE
+9,El área se encuentra totalmente descuidada,,3,TRUE
+10,En buen estado,,4,TRUE
+11,Algunas con deterioro,,4,TRUE
+12,En mal estado,,4,TRUE
+13,El sistema de tierra existente en óptimas condiciones,,5,TRUE
+14,Sistema de tierra en mal estado,,5,TRUE
+15,No se cuenta con sistema de tierra,,5,TRUE
+16,La infraestructura en buen estado,,6,TRUE
+17,Algunas áreas con corrosión ligera,,6,TRUE
+18,Áreas con corrosión severa,,6,TRUE
+19,Pintura excelentes condiciones,,7,TRUE
+20,Pintura con algunas áreas deterioradas,,7,TRUE
+21,Pintura en mal estado o sin pintura,,7,TRUE
+22,El sistema de drenaje cuenta con rejillas en excelente estado,,8,TRUE
+23,El sistema de drenaje tiene rejillas dañadas,,8,TRUE
+24,El sistema de drenaje sin algunas rejillas,,8,TRUE
+25,La infraestructura se encuentra en óptimas condiciones físicas,,9,TRUE
+26,La infraestructura tiene daños, sin riesgos inminentes,,9,TRUE
+27,La infraestructura tiene daños considerables,,9,TRUE
+28,Infraestructura sin fugas,,10,TRUE
+29,Fugas/derramas tipo 3,,10,TRUE
+30,Fugas/derramas tipo 2 y 1,,10,TRUE
+31,Los sistemas en excelente estado y funcionando,,11,TRUE
+32,Los sistemas con alertas de mal funcionamiento,,11,TRUE
+33,No se cuenta con sistemas o los existentes no funcionan,,11,TRUE
+34,Se cumple el programa de inspección entre el 85% y 100%,,12,TRUE
+35,El programa de inspección tiene un cumplimiento de menos de 70%,,12,TRUE
+36,No se cuenta con programa de inspección,,12,TRUE
+37,Se cumple el programa de pruebas entre el 85% y 100%,,13,TRUE
+38,El programa de pruebas tiene un cumplimiento de menos del 70%,,13,TRUE
+39,No se cuenta con programa de pruebas,,13,TRUE
+40,Se cumple el programa de calibración entre el 85% y 100%,,14,TRUE
+41,El programa de calibración tiene un cumplimiento de menos del 70%,,14,TRUE
+42,No se cuenta con programa de calibración,,14,TRUE
+43,Se cumple el programa de mantenimiento entre el 85% y 100%,,15,TRUE
+44,El programa de mantenimiento tiene un cumplimiento de menos de 70%,,15,TRUE
+45,No se cuenta con programa de mantenimiento,,15,TRUE
+46,Cumple con la regulación,,16,TRUE
+47,Cumple parcialmente con la regulación,,16,TRUE
+48,No cumple con la regulación,,16,TRUE
