@@ -4,6 +4,7 @@
 
 # Turtle is a built-in module in Python used for drawing and creating graphics.
 from turtle import Turtle, Screen
+import random
 
 # Another way to import the turtle module (import all)
 # from turtle import *
@@ -50,32 +51,63 @@ timmy.speed(1)
 #     timmy.forward(20)
 #     timmy.pen(pendown=(not timmy.isdown()))
 
+# Challenge 3
 # Draw a triangle, square, pentagon, hexagon, heptagon, octagon, nonagon, decagon
 # Using a list of shapes with their number of sides and colors
-shapes = [
-    {"name": "triangle", "sides": 3, "color": "red"},
-    {"name": "square", "sides": 4, "color": "blue"},
-    {"name": "pentagon", "sides": 5, "color": "green"},
-    {"name": "hexagon", "sides": 6, "color": "yellow"},
-    {"name": "heptagon", "sides": 7, "color": "orange"},
-    {"name": "octagon", "sides": 8, "color": "purple"},
-    {"name": "nonagon", "sides": 9, "color": "pink"},
-    {"name": "decagon", "sides": 10, "color": "brown"},
-]
+# shapes = [
+#     {"name": "triangle", "sides": 3, "color": "red"},
+#     {"name": "square", "sides": 4, "color": "blue"},
+#     {"name": "pentagon", "sides": 5, "color": "green"},
+#     {"name": "hexagon", "sides": 6, "color": "yellow"},
+#     {"name": "heptagon", "sides": 7, "color": "orange"},
+#     {"name": "octagon", "sides": 8, "color": "purple"},
+#     {"name": "nonagon", "sides": 9, "color": "pink"},
+#     {"name": "decagon", "sides": 10, "color": "brown"},
+# ]
 
 
-def draw_shape(sides_number, color_name):
-    angle = 360 / sides_number
-    length = 100
+# def draw_shape(sides_number, color_name):
+#     angle = 360 / sides_number
+#     length = 100
 
-    for _ in range(0, sides_number):
-        timmy.color(color_name)	
-        timmy.right(angle)
-        timmy.forward(length)
+#     for _ in range(0, sides_number):
+#         timmy.color(color_name)
+#         timmy.right(angle)
+#         timmy.forward(length)
 
-for shape in shapes:
-	draw_shape(shape["sides"], shape["color"])
 
+# for shape in shapes:
+#     draw_shape(shape["sides"], shape["color"])
+
+
+# Challenge 4
+timmy.pensize(8)
+timmy.speed(5)
+
+
+def get_random_angle():
+    index = random.randint(0, 3)
+    return [0, 90, 180, 270][index]
+
+
+def get_random_color():
+    index = random.randint(0, 7)
+    return [
+        "red",
+        "blue",
+        "green",
+        "yellow",
+        "orange",
+        "purple",
+        "pink",
+        "brown",
+    ][index]
+
+
+while range(0, 250):
+    timmy.color(get_random_color())
+    timmy.setheading(get_random_angle())
+    timmy.forward(30)
 
 screen = Screen()
 screen.exitonclick()
