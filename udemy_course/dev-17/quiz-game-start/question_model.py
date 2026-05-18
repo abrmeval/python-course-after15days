@@ -1,6 +1,6 @@
 class Question:
     # Constructor method
-    # self represents the instance of the class
+    # "self" represents the instance of the class
     # It binds the attributes with the given arguments
     def __init__(self, q_text, q_answer):
         self.text = q_text
