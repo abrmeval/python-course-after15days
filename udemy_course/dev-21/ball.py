@@ -10,6 +10,7 @@ class Ball(Turtle):
         self.penup()
         self.move_distance_x = MOVE_DISTANCE * 1.35
         self.move_distance_y = MOVE_DISTANCE
+        self.move_speed = 0.1
 
     def move(self):
         x, y = self.position()
@@ -20,4 +21,12 @@ class Ball(Turtle):
 
     def bounce_x(self):
         self.move_distance_x *= -1
-    
+        self._increase_speed()
+
+    def reset_position(self):
+        self.move_speed = 0.1
+        self.home()
+        self.bounce_x()
+
+    def _increase_speed(self):
+        self.move_speed *= 0.9
