@@ -1,4 +1,4 @@
-# SNAKE GAME
+# SNAKE GAME v2
 A simple snake game built using the turtle module in Python. The game features a snake that can be controlled using the arrow keys, and the objective is to eat food to grow longer while avoiding collisions with the walls and itself.
 
 ## Rules
@@ -9,3 +9,6 @@ A simple snake game built using the turtle module in Python. The game features a
 
 ## Features
 - The snake is represented by a series of square segments that follow the head of the snake.
+
+## New features
+ - The game now keeps track of the player's score and high score, which are displayed on the screen. It uses files to store the high score, so it persists even after the game is closed and reopened.
