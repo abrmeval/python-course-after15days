@@ -67,3 +67,32 @@ data = pandas.DataFrame(data_dict)  # Create a DataFrame from the dictionary.
 print(data)  # Print the DataFrame.
 
 data.to_csv("new_data.csv")  # Save the DataFrame to a CSV file.
+
+#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+
+# We open the csv file
+data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+# We get the "Primary Fur Color" column from the DataFrame
+colors = data["Primary Fur Color"]
+# We get the unique colors from the "Primary Fur Color" column, dropping any NaN values
+unique_colors = data["Primary Fur Color"].dropna().unique()
+
+print(unique_colors)
+
+# We create a list to hold the count of each unique color
+counter_colors = []
+for color in unique_colors:
+    counter_colors.append(len(colors[colors == color]))
+
+print(counter_colors)
+
+# We create a dictionary with the unique colors and their counts
+dict = {
+	"Fur color": unique_colors, 
+	"count": counter_colors
+}
+
+# We create a DataFrame from the dictionary and save it to a new CSV file
+data = pandas.DataFrame(dict) 
+data.to_csv("new_data2.csv") 
