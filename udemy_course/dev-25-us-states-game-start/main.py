@@ -32,6 +32,9 @@ while True:
     ).title()
     print(answer_state)
 
+    if answer_state == "Exit":
+        break
+
     row = data[data["state"] == answer_state]
     print(row)
 
@@ -43,16 +46,25 @@ while True:
         guessed_states[answer_state] = True
         score += 1
 
-    if score == 50:
-        turtle.Turtle().write(
-            "Congratulations! You guessed all the states!",
-            move=False,
-            align="center",
-            font=("Arial", 16, "bold"),
-        )
-        break
+        if score == 50:
+            turtle.Turtle().write(
+                "Congratulations! You guessed all the states!",
+                move=False,
+                align="center",
+                font=("Arial", 16, "bold"),
+            )
+            break
 
-pandas.DataFrame({"Score": [score]}).to_csv("score.csv", index=False)
+# We create a list of all the states in the U.S. and a list of the states that the user has not guessed yet.
+all_states = data["state"].to_list()
+states_to_learn = []
+for state in all_states:
+	s = guessed_states.get(state, False)
+	if not s:
+		states_to_learn.append(state)
+
+# We create a new CSV file called "states_to_learn.csv" that contains the states that the user has not guessed yet.
+pandas.DataFrame({"State": states_to_learn }).to_csv("states_to_learn.csv", index = False)
 
 # This code is to get the x and y coordinates of the mouse click on the turtle screen.
 
