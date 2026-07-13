@@ -1,7 +1,8 @@
 # List comprehension
+```python
 numbers = [1, 2, 3, 4]
-
-## A for loop common syntax
+```
+A for loop common syntax
 ```python
 new_list = []
 for n in numbers:

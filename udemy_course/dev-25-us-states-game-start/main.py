@@ -57,12 +57,14 @@ while True:
 
 # We create a list of all the states in the U.S. and a list of the states that the user has not guessed yet.
 all_states = data["state"].to_list()
-states_to_learn = []
-for state in all_states:
-	s = guessed_states.get(state, False)
-	if not s:
-		states_to_learn.append(state)
+# states_to_learn = []
+# for state in all_states:
+# 	s = guessed_states.get(state, False)
+# 	if not s:
+# 		states_to_learn.append(state)
 
+#Alternative using List comprehension
+states_to_learn = [state for state in all_states if not guessed_states.get(state, False)]
 # We create a new CSV file called "states_to_learn.csv" that contains the states that the user has not guessed yet.
 pandas.DataFrame({"State": states_to_learn }).to_csv("states_to_learn.csv", index = False)
 
