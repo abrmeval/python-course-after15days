@@ -39,3 +39,23 @@ names = ["Alex","Beth","Caroline", "Dave","Eleanor", "Freddie"]
 short_list = [name for name in names if len(name) < 5]
 uppercase_list = [name.upper() for name in names if len(name) >= 5]
 ```
+# Dictionary comprehension
+
+```python
+names = ["Alex","Beth","Caroline", "Dave","Eleanor", "Freddie"]
+```
+We can create a new dictionary from a list using Dictionary comprehension syntax.
+
+For example, we say that the key for this dictionary will be the name of the name list, the value will be a random number, then we iterate every name from the list.
+
+Syntax is similar as List comprehension.
+```python
+import random
+students_scores = {name:random.randint(60, 100) for name in names}
+```
+We can also extend this by adding a condition.
+Here we are creating a new dictionary from the previous one, but only adding the students that score is greater than or equals to 60.
+The items method returns a key-value pair list
+```python
+passed_students = {name:score for (name, score) in students_scores.items() if score >= 60}
+```
