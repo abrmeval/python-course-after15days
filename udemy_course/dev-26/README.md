@@ -56,6 +56,39 @@ students_scores = {name:random.randint(60, 100) for name in names}
 We can also extend this by adding a condition.
 Here we are creating a new dictionary from the previous one, but only adding the students that score is greater than or equals to 60.
 The items method returns a key-value pair list
+
 ```python
 passed_students = {name:score for (name, score) in students_scores.items() if score >= 60}
+```
+
+# Iterate over a Pandas DataFrame
+
+```python
+student_dict = {"student": ["Angela", "James", "Lily"], "score": [56, 78, 89]}
+```
+
+Loop through a dictionary
+```python
+for key, value in student_dict.items():
+    print(value)
+```
+```python
+import pandas
+
+student_data_frame = pandas.DataFrame(student_dict)
+```
+
+Loop through a data frame
+```python
+for key, value in student_data_frame.items():
+    print(value)
+```
+
+loop through rows of a data frame
+```python
+for index, row in student_data_frame.iterrows():
+    print(index)
+    print(row)
+    print(row.student)
+    print(row.score)
 ```
