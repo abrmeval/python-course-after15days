@@ -64,7 +64,7 @@ for key, value in student_data_frame.items():
     print(value)
 
 # loop through rows of a data frame
-
+print("loop through rows of a data frame\n")
 for index, row in student_data_frame.iterrows():
     print(index)
     print(row)
