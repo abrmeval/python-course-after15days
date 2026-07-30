@@ -35,7 +35,8 @@ def start_timer():
 
     if is_running:
         return
-    
+
+    # Convert minutes to seconds
     work_sec = WORK_MIN * 60
     short_sec = SHORT_BREAK_MIN * 60
     long_sec = LONG_BREAK_MIN * 60
