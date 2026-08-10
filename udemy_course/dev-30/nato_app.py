@@ -1,3 +1,4 @@
+# NATO app improved to handle exceptions
 import pandas
 
 # Keyword Method with iterrows()
