@@ -63,10 +63,12 @@ def save_file():
 
     if not validate(username, password, website):
         return
+    
+    website = website.capitalize()
 
     is_ok = messagebox.askokcancel(
         title=website,
-        message=f"These are the details entered: \nEmail: {username} \nPassword: {password} \nIs it ok to save?",
+        message=f"These are the details entered: \nWebsite: {website} \nEmail: {username} \nPassword: {password} \nIs it ok to save?",
     )
 
     if is_ok:
@@ -77,14 +79,14 @@ def save_file():
         input_password.delete(0, END)
 
 
-def write_to_file(website, username, password):
+def write_to_file(website, username, password):    
     try:
-         file = open("data.json", mode="r+", encoding="utf-8")
-         # Reading old data
-         data = json.load(file)
+        file = open("data.json", mode="r+", encoding="utf-8")
+        # Reading old data
+        data = json.load(file)
     except:
-         file = open("data.json", mode="w+", encoding="utf-8")
-         data = {website: {"username": username, "password": password}}
+        file = open("data.json", mode="w+", encoding="utf-8")
+        data = {website: {"username": username, "password": password}}
     else:
         # Updating data. "Also possible with data.update(new_data)"
         data[website] = {"username": username, "password": password}
@@ -96,6 +98,33 @@ def write_to_file(website, username, password):
         json.dump(data, file, indent=4)
         file.close()
 
+
+def find_password():
+    website = input_website.get().capitalize()
+
+    try:
+        file = open("data.json", mode="r", encoding="utf-8")
+        # Reading old data
+        data = json.load(file)
+    except FileNotFoundError:
+        messagebox.showerror(
+            title="No data file found",
+            message="No data file was found",
+        )
+    else:
+        try:
+            website_data = data[website]
+            messagebox.showinfo(
+                title="Website data",
+                message=f"Website: {website} \nUsername: {website_data["username"]} \nPassword: {website_data["password"]}",
+            )
+        except:
+            messagebox.showerror(
+                title="No data found",
+                message="No details for the website exists",
+            )
+        finally:
+            file.close()       
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
@@ -116,9 +145,9 @@ username_label.grid(row=2, column=0)
 password_label = Label(text="Password:", justify="right")
 password_label.grid(row=3, column=0)
 
-input_website = Entry(width=35)
+input_website = Entry()
 input_website.grid(
-    row=1, column=1, sticky="ew", columnspan=2, padx=(10, 0), pady=(0, 5)
+    row=1, column=1, sticky="ew", columnspan=1, padx=(10, 0), pady=(0, 5)
 )
 input_website.focus()
 input_username = Entry(width=35)
@@ -135,6 +164,8 @@ generate_password_button = Button(text="Generate Password", command=new_password
 generate_password_button.grid(row=3, column=2, sticky="w", padx=(10, 0), pady=(0, 5))
 add_button = Button(text="Add", width=36, command=save_file)
 add_button.grid(row=4, column=1, sticky="ew", columnspan=2, padx=(10, 0))
+search_button = Button(text="Search", command=find_password)
+search_button.grid(row=1, column=2, sticky="ew", padx=(10, 0), pady=(0, 5))
 
 
 window.mainloop()
