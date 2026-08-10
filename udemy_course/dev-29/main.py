@@ -61,7 +61,7 @@ def save_file():
         title=website,
         message=f"These are the details entered: \nEmail: {username} \nPassword: {password} \nIs it ok to save?",
     )
-    messagebox.showerror
+    
     if is_ok:
         with open("data.txt", mode="a", encoding="utf-8") as file:
             format = f"{website} | {username} | {password}\n"
