@@ -26,7 +26,7 @@ def get_word_card():
         return data[rdm_index]
     except:
         messagebox.showwarning(
-            title="You already finished word list",
+            title="You already finished the word list",
             message="You finished learning the whole list of vocabulary. \nIt is GAME OVER.",
         )
         window.destroy()
